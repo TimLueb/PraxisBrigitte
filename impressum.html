@@ -5,27 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Heilpraktiker Praxis - Ihr Experte für alternative Medizin und ganzheitliche Heilung." />
   <title>Heilpraktiker Praxis</title>
+  <!-- Google Fonts Einbindung für Comic Neue -->
+  <link href="https://fonts.googleapis.com/css?family=Comic+Neue:400,700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #3f4cd9;
     }
 
     header {
       background-color: #3f4cd9;
       color: white;
-      padding: 10px 0;
+      font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
       text-align: center;
-      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     }
 
     /* Navigation Styles */
     nav {
       background-color: #b9b546;
       position: relative;
-      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+      font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
+      margin: 0px 0px 0 0px;
     }
 
     .nav-links {
@@ -66,7 +68,6 @@
       margin: 20px 10px auto;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      max-width: 1200px;
     }
 
     footer {
@@ -74,6 +75,7 @@
       color: white;
       text-align: center;
       padding: 10px 0;
+      margin: 10px 0px 0 0px;
     }
 
     .kontakt-info {
@@ -146,31 +148,54 @@
 </head>
 <body>
 
-  <header style="display: flex; align-items: center; justify-content: center; gap: 100px;">
-    <img src="Logo_Praxis_BR.png" alt="Praxis Logo" style="height: 150px; border-radius: 8px;">
-    <div>
-      <h1>Brigitte Romann</h1>
-      <p>Heilpraktikerin <br>
-        <strong>Tel.</strong> 09122 887 91 91</p>
-    </div>
+  <header style="align-items: center; position: sticky; top: 0; z-index: 1000; height: 150px; display: flex; flex-direction: column; justify-content: center;">
+      <p style="font-size: 2em; margin: 0;"><strong>Brigitte Romann</strong></p>
+      <p style="font-size: 1em; margin: 10;">Heilpraktikerin <br>
+        Tulpenweg 4, 91126 Schwabach</p>
+      <p style="font-size: 1.5em; margin: 0; color: #ffffff;">
+        <strong>
+          Telefon <a href="tel:091228879191" style="color: #ffffff;">09122 887 91 91</a>
+        </strong>
+      </p>
   </header>
 
-  <nav>
+  <nav style="position: sticky; top: 150px;">
     <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Start</a></li>
+      <li><a href="index.html" onclick="closeMenuOnMobile()"><strong>START</strong></a></li>
       <li>
-        <a href="#behandlungen">Behandlungen</a>
+        <a href="#behandlungen" onclick="closeMenuOnMobile()"><strong>THERAPIE UND BEHANDLUNG</strong></a>
         <ul style="background-color: #aca82a; list-style: none; margin: 0; padding: 0; position: absolute; display: none;">
-          <li><em><a href="index.html#behandlungsschwerpunkte" style="padding-left: 30px;">Behandlungsschwerpunkte</a></em></li>
-          <li><em><a href="index.html#behandlungsmethoden" style="padding-left: 30px;">Behandlungsmethoden</a></em></li>
-          <li><em><a href="index.html#behandlungstermine" style="padding-left: 30px;">Behandlungstermine/-kosten</a></em></li>
+          <li><a href="index.html#behandlungsschwerpunkte" style="padding-left: 30px;" onclick="closeMenuOnMobile()">Behandlungsschwerpunkte</a></li>
+          <li><a href="index.html#behandlungsmethoden" style="padding-left: 30px;" onclick="closeMenuOnMobile()">Behandlungsmethoden</a></li>
+          <li><a href="index.html#behandlungstermine" style="padding-left: 30px;" onclick="closeMenuOnMobile()">Termine und Kosten</a></li>
         </ul>
       </li>
-      <li><a href="index.html#about">Über mich</a></li>
-      <li><a href="index.html#directions">Anfahrt</a></li>
+      <li><a href="index.html#about" onclick="closeMenuOnMobile()"><strong>ÜBER MICH</strong></a></li>
+      <li><a href="index.html#directions" onclick="closeMenuOnMobile()"><strong>ANFAHRT</strong></a></li>
     </ul>
   </nav>
+  <script>
+    function closeMenuOnMobile() {
+      if (window.innerWidth <= 768) {
+        const nav = document.getElementById("navLinks");
+        nav.classList.remove("show");
+      }
+    }
+  </script>
+  <style>
+    /* Offset für Anker-Sprung, damit Überschriften nicht hinter Menüleiste verschwinden */
+    section {
+      scroll-margin-top: 200px; /* Höhe von Header + Nav */
+    }
+    @media (max-width: 768px) {
+      section {
+        scroll-margin-top: 210px; /* ggf. kleinere Höhe für mobile */
+      }
+    }
+  </style>
+
+
   <script>
     // Dropdown für Untermenü "Behandlungen"
     document.addEventListener("DOMContentLoaded", function() {
@@ -185,6 +210,7 @@
     });
   </script>
 
+
   <section id="impressum">
     <div class="impressum-container">
     <div class="impressum-text">
@@ -194,7 +220,7 @@
             Tulpenweg 4<br>
             91126 Schwabach</p>
             <p> Telefon: 09122 – 887 91 91<br>
-            brigitte-romann@gmx.de</p>
+            b.romann@gmx.de</p>
             <p>Steuer-Nr. 247/221/30746 Finanzamt Schwabach</p>
             <p>Heilkundliche Tätigkeit ist von der Umsatzsteuer gemäß § 4 Nr.14 UStG befreit.</p>
             <p><strong>Berufshaftpflichtversicherung:</strong> SIGNAL IDUNA, 44121 Dortmund</p>
@@ -218,7 +244,7 @@
 </section>
 
   <footer>
-    <p>&copy; 2024 Heilpraktiker Praxis. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2025 - Alle Rechte vorbehalten.</p>
     <p>
       <a href="impressum.html" style="color: white; text-decoration: underline;">Impressum</a> |
       <a href="datenschutz.html" style="color: white; text-decoration: underline;">Datenschutz</a>

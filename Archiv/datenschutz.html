@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Heilpraktiker Praxis - Ihr Experte für alternative Medizin und ganzheitliche Heilung." />
+  <title>Heilpraktiker Praxis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #3f4cd9;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    }
+
+    /* Navigation Styles */
+    nav {
+      background-color: #b9b546;
+      position: relative;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 10px;
+      display: block;
+    }
+
+    .menu-toggle {
+      display: none;
+      background-color: #b9b546;
+      color: white;
+      padding: 15px;
+      font-size: 1.2em;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: right;
+    }
+
+    section {
+      padding: 20px;
+      background-color: white;
+      margin: 20px 10px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+    }
+
+    footer {
+      background-color: #b9b546;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .kontakt-info {
+      background-color: #7cb5ff79;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .start-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    }
+
+    .start-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+    }
+
+    .start-text {
+    flex: 1;
+    min-width: 250px;
+    }
+
+    /* Responsive Anpassung für kleinere Bildschirme */
+    @media (max-width: 768px) {
+    .start-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .start-text {
+        text-align: left;
+    }
+
+    .start-image {
+        max-width: 75%;
+    }
+    }
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #b9b546;
+      }
+
+      .nav-links li {
+        margin: 0;
+        border-top: 1px solid #b9b546;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header style="display: flex; align-items: center; justify-content: center; gap: 100px;">
+    <img src="Logo_Praxis_BR.png" alt="Praxis Logo" style="height: 150px; border-radius: 8px;">
+    <div>
+      <h1>Brigitte Romann</h1>
+      <p>Heilpraktikerin <br>
+        <strong>Tel.</strong> 09122 887 91 91</p>
+    </div>
+  </header>
+
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Start</a></li>
+      <li>
+        <a href="#behandlungen">Behandlungen</a>
+        <ul style="background-color: #aca82a; list-style: none; margin: 0; padding: 0; position: absolute; display: none;">
+          <li><em><a href="index.html#behandlungsschwerpunkte" style="padding-left: 30px;">Behandlungsschwerpunkte</a></em></li>
+          <li><em><a href="index.html#behandlungsmethoden" style="padding-left: 30px;">Behandlungsmethoden</a></em></li>
+          <li><em><a href="index.html#behandlungstermine" style="padding-left: 30px;">Behandlungstermine/-kosten</a></em></li>
+        </ul>
+      </li>
+      <li><a href="index.html#about">Über mich</a></li>
+      <li><a href="index.html#directions">Anfahrt</a></li>
+    </ul>
+  </nav>
+  <script>
+    // Dropdown für Untermenü "Behandlungen"
+    document.addEventListener("DOMContentLoaded", function() {
+      const behandlungen = document.querySelector('.nav-links > li:nth-child(2)');
+      const submenu = behandlungen.querySelector('ul');
+      behandlungen.addEventListener('mouseenter', function() {
+        submenu.style.display = 'block';
+      });
+      behandlungen.addEventListener('mouseleave', function() {
+        submenu.style.display = 'none';
+      });
+    });
+  </script>
+
+  <section id="datenschutz">
+    <div class="datenschutz-container">
+    <div class="datenschutz-text">
+        <h3>Datenschutzhinweise</h3>
+          <p>Der Schutz Ihrer Daten ist mir sehr wichtig. Für eine transparente Zusammenarbeit weise ich Sie auf wichtige Verarbeitungstätigkeiten und Besonderheiten hin.</p>
+          <h4>Zweck und Rechtsgrundlage der Datenverarbeitung</h4>
+            <p>Ihre personenbezogenen Daten werden zum Zwecke der heilkundlichen Versorgung sowie zur Abrechnung der Leistungen erhoben und im automatisierten Praxisverwaltungssystem und in den Patientenakten gespeichert.</p>
+            <p>Dazu erheben wir neben Ihren Kontaktdaten insbesondere Gesundheitsdaten wie Anamnese, Medikation, Diagnosen, Therapievorschläge, Befunde usw. Auch andere Heilpraktiker/Ärzte, bei denen Sie sich in Behandlung befinden, können uns zu diesem Zweck Daten zur Verfügung stellen, ihre Einwilligung vorausgesetzt.</p>
+            <p>Die Erhebung und Verarbeitung Ihrer personenbezogenen Daten ist auf der Grundlage des Behandlungsvertrages zwischen Ihnen und uns dem Praxisinhaber notwendige Voraussetzung für eine adäquate und sorgfältige Behandlung. Rechtsgrundlage ist gemäß Art. 6 Abs. 1 lit. b, i.V.m. Art. 9 Abs. 2 lit. f, lit. h,  i.V.m. Abs. 3 DSGVO, § 22 Abs. 1 Nr. 1 lit. b BDSG und die in diesem Zusammenhang von Ihnen abgegebenen Einwilligungen, gemäß Art. 6 Abs. 1 lit. a DSGVO.</p>
+            <p>Weiterhin unterliegen wir verschiedenen rechtlichen Verpflichtungen. Zur Erfüllung dieser Verpflichtungen kann eine Verarbeitung von personenbezogenen Daten, nach Art. 6 Abs. 1c DSGVO rechtlicher Verpflichtungen oder nach Art. 6 Abs. 1e DSGVO im öffentlichen Interesse, erforderlich sein, wie z.B.
+              <ul>
+                <li>Kontroll- und Meldepflichten</li>
+                <li>Kreditwürdigkeits-, Alters- und Identitätsprüfungen</li>
+                <li>Prävention/Abwehr strafbarer Handlungen</li>
+              </ul>
+          <h4>Verantwortlich gem. Art. 4 Abs. 7 EU-Datenschutz-Grundverordnung (DSGVO)</h4>
+            <p>Brigitte Romann (Kontaktdaten siehe Impressum)</p>
+          <h4>Geltungsbereich</h4>
+            <p>Diese Datenschutzhinweise gelten für folgende Angebote:</p>
+              <ul>
+                <li>unsere Website</li>
+              </ul>
+            <p>und immer dann, wenn sonst aus einem unserer Angebote auf diese Datenschutzhinweise verwiesen wird, unabhängig davon, auf welchem Weg Sie es aufrufen oder verwenden.</p>
+          <h4>Erhebung personenbezogener Daten bei Kontaktaufnahme Ihrerseits</h4>
+            <p>Wenn Sie uns eine E-Mail schreiben, telefonisch kontaktieren oder das Kontaktformular nutzen (zur Zeit nicht aktiviert), erheben, bearbeiten und speichern wir folgende Daten von Ihnen und nutzen diese zum Zwecke der Beantwortung Ihrer Anfrage.</p>
+              <ul>
+                <li>Vorname, Name</li>
+                <li>Adresse</li>
+                <li>Geburtsdatum</li>
+                <li>Festnetz-/ Mobil-Telefonnummer</li>
+                <li>E-Mail-Adresse</li>
+              </ul>
+            <h4>Erhebung personenbezogener Daten bei Besuch unserer Website</h4>
+              <p>(1) Bei der bloß informatorischen Nutzung der Website, also wenn Sie sich nicht registrieren oder uns anderweitig Informationen übermitteln, erheben wir nur die personenbezogenen Daten, die Ihr Browser an unseren Server übermittelt. Wenn Sie unsere Website betrachten möchten, erheben wir die folgenden Daten, die für uns technisch erforderlich sind, um Ihnen unsere Website anzuzeigen und die Stabilität und Sicherheit zu gewährleisten (Rechtsgrundlage ist Art. 6 Abs. 1 S. 1 lit. f DSGVO):</p>
+                <ul>
+                  <li>IP-Adresse</li>
+                  <li>Datum und Uhrzeit der Anfrage</li>
+                  <li>Zeitzonendifferenz zur Greenwich Mean Time (GMT)</li>
+                  <li>Inhalt der Anforderung (konkrete Seite)</li>
+                  <li>Zugriffsstatus/HTTP-Statuscode</li>
+                  <li>jeweils übertragene Datenmenge</li>
+                  <li>Website, von der die Anforderung kommt</li>
+                  <li>Browser</li>
+                  <li>Betriebssystem und dessen Oberfläche</li>
+                  <li>Sprache und Version der Browsersoftware</li>
+                </ul>
+                <p>Wir verwenden für unsere Website aktuell keine Cookies oder Tracking-Technologien und keine Verknüpfung zu social media-Plattformen. Beim Besuch unserer Website findet keine automatisierte Entscheidungsfindung, das sogenannte Profiling, statt.</p>
+                <p>Wir verarbeiten Ihre personenbezogenen Daten nur zu dem angegeben Zweck. Jede weitere Verarbeitung zu anderen Zwecken bedarf Ihrer vorherigen Einwilligung.</p>
+            <h4>Keine Verpflichtung zur Bereitstellung & Folgen der Nichtbereitstellung</h4>
+              <p>Die Bereitstellung der personenbezogenen Daten ist nicht gesetzlich oder vertraglich vorgeschrieben und Sie sind nicht verpflichtet, Daten bereitzustellen. Wir informieren Sie im Rahmen des Eingabeprozesses, wenn die Bereitstellung personenbezogener Daten für den jeweiligen Service erforderlich ist (z.B. durch die Bezeichnung als „Pflichtfeld“). Bei erforderlichen Daten hat die Nichtbereitstellung zur Folge, dass der betreffende Service nicht erbracht werden kann.</p>
+            <h4>Speicherdauer Ihrer Daten</h4>
+              <p>Wir verarbeiten Ihre personenbezogenen Daten, soweit erforderlich, für die Dauer der Geschäftsbeziehung, bzw. solange es für die genannten Zwecke erforderlich ist sowie darüber hinaus gemäß den gesetzlichen Aufbewahrungs- und Dokumentationspflichten, die sich insbesondere aus der Abgabenordnung und dem Handelsgesetzbuch ergeben und i.d.R. 10 Jahre betragen. Darüber hinaus können personenbezogene Daten solange gespeichert und aufbewahrt werden, als die Daten für ein anhängiges gerichtliches oder behördliches Verfahren, in dem der Verantwortliche Parteistellung hat, von Bedeutung sind.</p>
+            <h4>Ihre Rechte</h4>
+              <p>Sie haben uns gegenüber die folgenden Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
+                <ul>
+                  <li>Recht auf Auskunft, welche Daten wir von Ihnen erhoben und gespeichert haben</li>
+                  <li>Recht auf Berichtigung oder Löschung, Ihrer bereits bestehenden Daten, nach Prüfung etwaiger Aufbewahrungsfristen</li>
+                  <li>Recht auf Einschränkung der Verarbeitung, bezüglich Ihrer Daten, falls diese nicht mehr in dem Umfang benötigt werden</li>
+                  <li>Recht auf Widerspruch gegen die Verarbeitung, sodass wir die Verarbeitung einstellen müssen</li>
+                  <li>Recht auf Datenübertragbarkeit, falls Sie Datensätze zu einer anderen Institution mitnehmen möchten.</li>
+                </ul>
+              <p>Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren. Diese Beschwerde richten Sie bitte an die zuständige Aufsichtsbehörde unter www.lda.bayern.de.</p>
+            <h4>Widerspruch</h4>
+              <p>Sie haben jederzeit das Recht gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen. Richten Sie diesen bitte schriftlich per E-Mail oder per Post an uns (siehe Impressum).</p>
+              <p>Da sich gesetzliche Bestimmungen ändern können, bitten wir Sie regelmäßig diese Datenschutzhinweise zu lesen. Änderungen werden wir zeitnah einpflegen, um eine transparente Information an Sie weitergeben zu können.</p>
+              <p><em><strong>Stand August 2025</strong></em></p>
+            </div>
+          </div>
+        </section>
+
+  <footer>
+    <p>&copy; 2024 Heilpraktiker Praxis. Alle Rechte vorbehalten.</p>
+    <p>
+      <a href="impressum.html" style="color: white; text-decoration: underline;">Impressum</a> |
+      <a href="datenschutz.html" style="color: white; text-decoration: underline;">Datenschutz</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

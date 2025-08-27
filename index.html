@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Heilpraktiker Praxis - Ihr Experte für alternative Medizin und ganzheitliche Heilung." />
+  <title>Heilpraktiker Praxis</title>
+  <!-- Google Fonts Einbindung für Comic Neue -->
+  <link href="https://fonts.googleapis.com/css?family=Comic+Neue:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #3f4cd9;
+    }
+
+    header {
+      background-color: #3f4cd9;
+      color: white;
+      font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
+      text-align: center;
+    }
+
+    /* Navigation Styles */
+    nav {
+      background-color: #b9b546;
+      position: relative;
+      font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
+      margin: 0px 0px 0 0px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 10px;
+      display: block;
+    }
+
+    .menu-toggle {
+      display: none;
+      background-color: #b9b546;
+      color: white;
+      padding: 15px;
+      font-size: 1.2em;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: right;
+    }
+
+    section {
+      padding: 20px;
+      background-color: white;
+      margin: 20px 10px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #b9b546;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin: 10px 0px 0 0px;
+    }
+
+    .kontakt-info {
+      background-color: #7cb5ff79;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .start-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    }
+
+    .start-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+    }
+
+    .start-text {
+    flex: 1;
+    min-width: 250px;
+    }
+
+    /* Responsive Anpassung für kleinere Bildschirme */
+    @media (max-width: 768px) {
+    .start-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .start-text {
+        text-align: left;
+    }
+
+    .start-image {
+        max-width: 75%;
+    }
+    }
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #b9b546;
+      }
+
+      .nav-links li {
+        margin: 0;
+        border-top: 1px solid #b9b546;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header style="align-items: center; position: sticky; top: 0; z-index: 1000; height: 150px; display: flex; flex-direction: column; justify-content: center;">
+      <p style="font-size: 2em; margin: 0;"><strong>Brigitte Romann</strong></p>
+      <p style="font-size: 1em; margin: 10;">Heilpraktikerin <br>
+        Tulpenweg 4, 91126 Schwabach</p>
+      <p style="font-size: 1.5em; margin: 0; color: #ffffff;">
+        <strong>
+          Telefon <a href="tel:091228879191" style="color: #ffffff;">09122 887 91 91</a>
+        </strong>
+      </p>
+  </header>
+
+  <nav style="position: sticky; top: 150px;">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" onclick="closeMenuOnMobile()"><strong>START</strong></a></li>
+      <li>
+        <a href="#behandlungen" onclick="closeMenuOnMobile()"><strong>THERAPIE UND BEHANDLUNG</strong></a>
+        <ul style="background-color: #aca82a; list-style: none; margin: 0; padding: 0; position: absolute; display: none;">
+          <li><a href="index.html#behandlungsschwerpunkte" style="padding-left: 30px;" onclick="closeMenuOnMobile()">Behandlungsschwerpunkte</a></li>
+          <li><a href="index.html#behandlungsmethoden" style="padding-left: 30px;" onclick="closeMenuOnMobile()">Behandlungsmethoden</a></li>
+          <li><a href="index.html#behandlungstermine" style="padding-left: 30px;" onclick="closeMenuOnMobile()">Termine und Kosten</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#about" onclick="closeMenuOnMobile()"><strong>ÜBER MICH</strong></a></li>
+      <li><a href="index.html#directions" onclick="closeMenuOnMobile()"><strong>ANFAHRT</strong></a></li>
+    </ul>
+  </nav>
+  <script>
+    function closeMenuOnMobile() {
+      if (window.innerWidth <= 768) {
+        const nav = document.getElementById("navLinks");
+        nav.classList.remove("show");
+      }
+    }
+  </script>
+  <style>
+    /* Offset für Anker-Sprung, damit Überschriften nicht hinter Menüleiste verschwinden */
+    section {
+      scroll-margin-top: 200px; /* Höhe von Header + Nav */
+    }
+    @media (max-width: 768px) {
+      section {
+        scroll-margin-top: 210px; /* ggf. kleinere Höhe für mobile */
+      }
+    }
+  </style>
+
+
+  <script>
+    // Dropdown für Untermenü "Behandlungen"
+    document.addEventListener("DOMContentLoaded", function() {
+      const behandlungen = document.querySelector('.nav-links > li:nth-child(2)');
+      const submenu = behandlungen.querySelector('ul');
+      behandlungen.addEventListener('mouseenter', function() {
+        submenu.style.display = 'block';
+      });
+      behandlungen.addEventListener('mouseleave', function() {
+        submenu.style.display = 'none';
+      });
+    });
+  </script>
+
+
+  <section id="start" style="background-color: #f1f0f0;">
+    <div class="start-container">
+      <img src="Bild_Brigitte_Romann.png" alt="Heilpraktikerin bei der Arbeit" class="start-image"/>
+    <div class="start-text">
+      <p>Seit 25 Jahren arbeite ich als selbständige Heilpraktikerin. Schwerpunkt meiner Arbeit ist eine ganzheitliche Rücken- und Gelenktherapie, wobei mir meine langjährige Erfahrung in der Schulmedizin von Nutzen sind.</p>
+      <p>Mir ist es wichtig, für jede Patientin und jeden Patienten ein individuelles Therapiekonzept zu entwickeln. Das bedeutet in der Praxis, die Anwendung ganz unterschiedlicher Techniken optimal aufeinander abzustimmen.</p>
+      <p>Die Methoden einer sanften Wirbelsäulen- und Gelenktherapie sowie verschiedene Massagetechniken dienen dazu, den Energiefluss im Körper zu aktivieren. Die Balance zwischen Körper, Psyche und emotionalem Zustand kann dadurch verbessert bzw. wiederhergestellt werden.</p>
+      <p>Ein weiterer Schwerpunkt meiner Arbeit ist die Einbeziehung systemischer Therapiekonzepte für die Behandlung von traumatischen Erfahrungen, unspezifischen Angstzuständen sowie chronischen Beschwerden unklarer Herkunft.</p>
+      <p>Eines haben all diese Behandlungsmethoden gemeinsam: Sie sind sanft und ungefährlich. Sie aktivieren die Selbstheilungskräfte des Körpers. Es sind ganzheitliche Behandlungsmethoden, die sowohl körperliche als auch psychische und emotionale Bereiche einbeziehen.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="behandlungen" style="background-color: #f1f0f0;">
+    <h2 style="color: #8d8a30;">THERAPIE UND BEHANDLUNG</h2>
+    <div class="behandlungen-container">
+    <div class="behandlungen-text">
+      <section id="patientengruppe">
+        <h3>Wer kann behandelt werden?</h3>
+        <ul>
+          <li>Kinder</li>
+          <li>Jugendliche</li>
+          <li>Erwachsene</li>
+        </ul>
+      </section>
+      <section id="behandlungsschwerpunkte">
+      <h3>Welche Beschwerden können behandelt werden?</h3>
+      <ul>
+        <li>Kopfschmerzen / Migräne / Hörsturz / Tinnitus</li>
+        <li>Kiefergelenkbeschwerden</li>
+        <li>Schleudertrauma</li>
+        <li>Atlas- / Halswirbelsäulenblockierungen</li>
+        <li>Schulter- / Schlüsselbeinbeschwerden</li>
+        <li>Chronisches Schulter- / Armsyndrom</li>
+        <li>Carpaltunnelsyndrom (CTS)</li>
+        <li>Blockaden und Verspannungen ISG / Kreuzbein</li>
+        <li>Brust- / Lendenwirbelbeschwerden (z.B. Skoliose, BS-Vorfall)</li>
+        <li>Ischiasbeschwerden / Hexenschuss</li>
+        <li>Gelenkbeschwerden aller Art</li>
+        <li>Postoperative Beschwerden</li>
+        <li>chronische Schmerzen unklarer Genese</li>
+        <li>Unruhe- / Angstzustände, Traumata u. a. mehr</li>
+      </ul>
+    </p>
+    </section>
+    <section id="behandlungsmethoden">
+    <h3>Behandlungsmethoden </h3>
+    <p>Nach ausführlicher Anamnese / Diagnose erfolgt die Anwendung verschiedener Therapieformen und Behandlungsmethoden je nach individuellen Beschwerden, z.B. </p>
+    <ul>
+      <li>Manuelle Wirbelsäulen- und Gelenktherapie, u.a. nach Dieter Dorn </li>
+        <details>
+          <summary><em>mehr</em></summary>
+            <p>Die Dornmethode beruht primär darauf, das Becken ins Gleichgewicht zu bringen. Dies erreicht man durch Korrektur von Beinlängendifferenzen und verschobenen Beckengelenken (Ileosacralgelenk/Kreuzbein). Blockierte Wirbel und Gelenke werden manuell eingerichtet, wobei die Muskulatur des Patienten in Bewegung ist. Unterstützende Übungen für Zuhause stabilisieren Muskeln, Bänder und Gelenke. </p>
+        </details>
+      <li>Osteopathische Techniken, Craniosacraltherapie u.a.
+        <details>
+          <summary><em>mehr</em></summary>
+            <p>Die Osteopatie ermöglicht es, Fehlfunktionen im Bewegungsapparat, im Gewebe (Muskulatur, Faszien, Bindegewebe) sowie in Organen zu diagnostizieren und mit gezielten, behutsamen Handgriffen zu korrigieren. Weitere bewährte Methoden der manuellen Therapie sind u.a. die Energiearbeit und die Craniosacraltherapie. Dadurch können Blockierungen und alte Verspannungen gelöst werden.  </p>
+        </details>
+      <li>Systemische Therapie und Behandlungsformen
+        <details>
+          <summary><em>mehr</em></summary>
+            <p>Körperliche und psychische Probleme haben oft tieferliegende Ursachen, z.B. ausgelöst durch frühere Ereignisse. Als Traumata im Körper abgespeichert, wirken sie bis in unsere gegenwärtige Lebenssituation hinein. Mittels systemischer Therapie (u.a. nach Pesso) ist es gemeinsam mit der Patientin/dem Patienten möglich, ggf. länger zurückliegende Ursachen der aktuellen Beschwerden zu finden. Oft ergeben sich daraus alternative Lösungsansätze für den Umgang mit chronischen Beschwerden und die Bewältigung traumatischer Erfahrungen.</p>
+        </details>
+    </ul>
+    <p>Die individuell abgestimmte Kombination verschiedener Behandlungsmethoden dient dem Ziel, die mentale Resilienz zu stärken, körpereigene Heilungskräfte und Widerstandsfähigkeit zu aktivieren und den Herausforderungen im alltäglichen Leben bewusster und gelassener begegnen zu können. Alle Behandlungen sind mit einer ausführlichen Beratung verbunden. Je nach Beschwerden können auch unterstützende Medikationen angewandt werden (z.B. durch Homöopathie, Schüsslersalze u.a.).</p>
+    </section>
+    <section id="behandlungstermine">
+    <h3>Behandlungszeiten</h3>
+      <p>Meine regulären Praxiszeiten sind Montag bis Mittwoch zwischen 9 und 17 Uhr. </p>
+      <p>Für Notfall-Termine sind ggf. Abweichungen möglich.</p>
+
+    <h3>Behandlungstermine</h3>
+    <p><strong><em>Eine Terminvergabe ist nur telefonisch möglich.</em></strong> </p>
+    <p>Sie können gern jederzeit anrufen. Falls Sie mich nicht persönlich erreichen, hinterlassen Sie mir bitte eine Nachricht mit Telefonnummer auf dem Anrufbeantworter, ich rufe dann umgehend zurück. Ein Kontakt per Mail oder Spontanbesuche in der Praxis sind leider nicht möglich. Nicht eingehaltene Termine ohne vorherige Absage können in Rechnung gestellt werden.</p>
+
+    <h3>Behandlungsdauer</h3>
+    <p>Eine Behandlung dauert in der Regel ca. 45 Minuten, Abweichungen ggf. nach Absprache möglich.</p>
+
+    <h3>Behandlungskosten</h3>
+    <p>Die Gesamtkosten richten sich nach Aufwand und Behandlungsdauer. Eine Behandlung (Dauer 45-50 Min.) kostet ca. 85-95 €. Nach Abschluss der Behandlung erhalten Sie eine Rechnung gemäß der Gebührenordnung für Heilpraktiker, die alle erfolgten Leistungen detailliert auflistet.</p>
+    <p>Die Rechnungen sind fristgerecht und ohne Abzug zu zahlen. Behandlungskosten für Heilpraktiker werden in der Regel von den gesetzlichen Krankenkassen nicht übernommen. Patienten mit Beihilfe, Zusatz- oder Privatversicherung können die Kosten ggf. nachträglich ganz oder teilweise erstattet bekommen. Bitte informieren Sie sich vorab bei Ihrer Krankenkasse!</p>
+    </section>
+  </div>
+</section>
+
+  <section id="about" style="background-color: #f1f0f0;">
+    <h2 style="color: #8d8a30;">ÜBER MICH</h2>
+    <p>Ausbildung zur Krankenschwester, 1983 Beginn meiner Berufstätigkeit im Krankenhaus Roth (u.a. OP/Notaufnahme). Nach Geburt meiner Kinder vorübergehend in ambulanter Krankenpflege tätig, danach bis 1999 als Krankenschwester in einer Praxis für Anästhesie und Schmerztherapie. </p> 
+    <p>Im Laufe meiner Berufstätigkeit entwickelte sich zunehmendes Interesse an ganzheitlichen Gesundheitskonzepten und alternativen Behandlungsmethoden in Ergänzung zur Schulmedizin, was im Jahr 2000 zum Abschluss meiner Ausbildung zur Heilpraktikerin führte. Selbständig seit 2001, in eigener Praxis ab 2003 in Nürnberg, arbeite ich seit 2016 wieder in Schwabach. </p>
+    <p>Die Berufserfahrung in der konventionellen Medizin sowie diverse Weiterbildungen in verschiedenen alternativen Behandlungsmethoden ermöglichen mir in meiner therapeutischen Arbeit einen differenzierten und ganzheitlichen Blick auf vielfältige Beschwerden und deren mögliche Ursachen. </p>
+  </section>
+
+  <section id="directions" style="background-color: #f1f0f0;">
+    <h2 style="color: #8d8a30;">ANFAHRT</h2>
+    <div class="directions-container" style="display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap;">
+      <div class="directions-map" style="flex: 0 0 300px; max-width: 350px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.234151797817!2d11.025!3d49.329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1f6e8e7b6e8b1%3A0x123456789abcdef!2sTulpenweg%204%2C%2091126%20Schwabach!5e0!3m2!1sde!2sde!4v1710000000000!5m2!1sde!2sde"
+          width="100%"
+          height="300"
+          style="border:0; border-radius:8px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Google Maps Standort Tulpenweg 4, Schwabach"
+        ></iframe>
+      </div>
+      <div class="directions-text" style="flex: 1; min-width: 250px;">
+        <p>Meine Praxis ist auch mit dem ÖPNV zu erreichen:</p>
+        <p>Ab Bahnhof Schwabach halbstündlich mit <br> 
+          <strong>BUS 663 </strong>Richtung Unterreichenbach/Gustenfelden,  <br> 
+          Fahrzeit ca. 15 Min. bis <br> 
+          <strong> Haltestelle "An der Leite" </strong> <br> (3 Min. Fußweg bis zur Praxis)</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Alle Rechte vorbehalten.</p>
+    <p>
+      <a href="impressum.html" style="color: white; text-decoration: underline;">Impressum</a> |
+      <a href="datenschutz.html" style="color: white; text-decoration: underline;">Datenschutz</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

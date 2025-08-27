@@ -1,0 +1,164 @@
+Return-path: <cgoelitz@gmx.de>
+Original-recipient: rfc822;timluebbers@me.com
+Received: from p00-icloudmta-smtpin-us-central-1n-60-percent-13 by p131-mailgateway-smtp-6f565b47b9-tg5rx (mailgateway 2530B71)
+	with SMTP id a4fed3fa-c09d-481d-b5e7-222c197d9ffe 
+	for <timluebbers@me.com>; Thu, 7 Aug 2025 12:21:25 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: a4fed3fa-c09d-481d-b5e7-222c197d9ffe
+Received: from mout.gmx.net (mout.gmx.net [212.227.17.21])
+	by p00-icloudmta-smtpin-us-central-1n-60-percent-13 (Postfix) with ESMTPS id F3D8AC0008C
+	for <timluebbers@me.com>; Thu,  7 Aug 2025 12:21:21 +0000 (UTC)
+X-ICL-Info: GAtbRVYDBVFFSlVFSgQEUVUKE0oWX1gHVQoPB0UCB1BbS1RAVgEBTEdIRhIcDVUFGhwKHgxKdgUYAUgTHRBQBkgeCw9WVFNCBxpbAxFdWhcQGwQSCkN2DxBXBRgVEF4HGRZbGhdFQkwSFB5ZFlVCQgUNFEoVX0MWWx4LD1ZeUxZVHQJKH11OTBEcRhoRVAteAQsPGRFET09CGlZEGgUAWlgaVhQcHQIBR0pLT0xRBE8TTlZFSwZTAxYaVkRVAQFXQUxQTkoHD1tESCYDCllYCwEASxoLVxsQEAoSWh9dTk8SFB5aFFlAB1hMBBFPBQAGWA0BBQJKCA==
+X-ICL-Score: 2.33303322423
+Authentication-Results: bimi.icloud.com; bimi=none
+X-ARC-Info: policy=fail; arc=none
+Authentication-Results: arc.icloud.com; arc=none
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=gmx.de
+X-DMARC-Policy: v=DMARC1; p=quarantine; rua=mailto:dmarcreport@gmx.net
+X-DMARC-Info: pass=pass; dmarc-policy=quarantine; s=r1; d=r1; pdomain=gmx.de
+Authentication-Results: dkim-verifier.icloud.com;
+	dkim=pass (2048-bit key) header.d=gmx.de header.i=cgoelitz@gmx.de header.b=egWuCjwH
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of cgoelitz@gmx.de designates 212.227.17.21 as permitted sender) smtp.mailfrom=cgoelitz@gmx.de
+Received-SPF: pass (spf.icloud.com: domain of cgoelitz@gmx.de designates 212.227.17.21 as permitted sender) receiver=spf.icloud.com; client-ip=212.227.17.21; helo=mout.gmx.net; envelope-from=cgoelitz@gmx.de
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmx.de;
+	s=s31663417; t=1754569280; x=1755174080; i=cgoelitz@gmx.de;
+	bh=GVBf1CcxL2CoaF+w0myyuocTMK85uZ8aIvhv/F54lq8=;
+	h=X-UI-Sender-Class:MIME-Version:Message-ID:From:To:Subject:
+	 Content-Type:Date:Content-Transfer-Encoding:In-Reply-To:
+	 References:cc:content-transfer-encoding:content-type:date:from:
+	 message-id:mime-version:reply-to:subject:to;
+	b=egWuCjwHvr1ztrdbTniWR8RB7Le6pN/hz4RZ6jnHH/Dny3N0zDizWgrapTerWWiU
+	 ROfuAycpMlKTBotm4jrxH8Xt10+J+jj37XKPwISFXGHglmGWCMw1kTPT2kGFzMDEs
+	 f7kUi1gacEs8cX0IPMQkGz6OfJsDqc7C8p/DIf2aX5no2UotDhUk6YMC7dfGJskCm
+	 fVxum29zCN5lCbapVZnEsZJMbfG2taLYDqCevtLOhDv0r2Eh/I3/sP1S6dkBqrx3/
+	 mY3xbk1hMaC6Adv6DzNQPDv7cdv70zCvIlJqdQH16tcICJ9Mms3n+A+Z+hFplJvPE
+	 qIKpB0PF8FFzJgTTFw==
+X-UI-Sender-Class: 724b4f7f-cbec-4199-ad4e-598c01a50d3a
+Received: from [91.4.198.39] ([91.4.198.39]) by
+ trinity-msg-rest-gmx-gmx-live-5bf756d-tgrzz (via HTTP); Thu, 7 Aug 2025
+ 12:21:20 +0000
+MIME-Version: 1.0
+Message-ID: <trinity-7c03b568-c0cd-4c23-84a2-f70236eacc03-1754569279911@trinity-msg-rest-gmx-gmx-live-5bf756d-tgrzz>
+From: cgoelitz@gmx.de
+To: timluebbers@me.com
+Subject: =?UTF-8?Q?=C2=A0Website_Praxis_Brigitte=5F2?=
+Content-Type: text/html; charset=UTF-8
+Importance: normal
+Date: Thu, 7 Aug 2025 12:21:20 +0000
+Content-Transfer-Encoding: quoted-printable
+In-Reply-To: <trinity-54ace6e6-fa87-4157-8541-d4cd60158387-1754494119135@trinity-msg-rest-gmx-gmx-live-b86d556f-jzz4z>
+References: <trinity-54ace6e6-fa87-4157-8541-d4cd60158387-1754494119135@trinity-msg-rest-gmx-gmx-live-b86d556f-jzz4z>
+X-Priority: 3
+X-Provags-ID: V03:K1:0pQAlW+1/A5HqIzMym+JylXBMxDyVDE1mnQaKihUTTrNcMMC8QyAUcPiuQVMXz8Ah/JrE
+ Iow2km0knSo6qYebNykRA4Bc1OwbwJW87kWpY++sTYxL2NE9XfeV3AEqHp2lcTLYe1KJZeTizG6O
+ JvBBOXF7swliqHbILK/bkRv408ccdK8m1WIb3Tgl6NlQPxHusynCFxPiZ79F/N5P8NFyrbTDWI1C
+ zJAv1H9HU1jI7pGatDvUZc2ILpL8tLdqroT8q3a6MECMrs1P/H4QWN3IhVZhVyN7OPsVrJJJbcfc
+ FBakp4cPl0GQRvBESf8BYfTKCrFXpJHEq0VNnpd0CkqxmgeeCbKMvIoTR+ZPtPqb8U=
+UI-OutboundReport: notjunk:1;M01:P0:3AqhikZJIJM=;1JBuFJdRDkreQupj9y0z1GtXS8P
+ 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
+ w==
+X-MANTSH: 1TFkXGxMbEQpZRBdhe3lmSV5vTRphYxEKWU0XZEVETxEKX1kXHhoTEQpfTRdkRUR
+ PEQpZSRcZHXEbBh0ZdwYbGBsGGgYaBh8YBhgaGnEbGhoQGncGGgYaBhoGGgYaBhpxGhAadwYaE
+ QpZXhdsbHkRCkNOF019WFIfWGF4eFhaYEF1Um5JYkFDZRteQHhhaW5hQUJJEQpYXBcZBBoEHx4
+ FGxoEGxwfBBgYBBgeHBAbHhofGhEKXlkXTFNAHU4RCk1cFxsaHxEKTFoXaGlNTWsRCkxGF2xNa
+ xEKQ1oXGBsYBBgYHQQbHQQYGxEKQl4XGxEKQlwXGxEKXk4XGxEKQksXaE1kGmIZb2kSemERCkJ
+ JF2hNZBpiGW9pEnphEQpCRRdke2FzXFh+exttGBEKQk4XaE1kGmIZb2kSemERCkJMF2R7YXNcW
+ H57G20YEQpCbBdke2FzXFh+exttGBEKQkAXaFAFX3lkWkEcRWERCkJYF2VeWR5Sf0tcWGdiEQp
+ CeBduSGFueU5BR1phbBEKTV4XGxEKWlgXGBEKcGgXbWJzb09HaExiflgQGRoRCnBoF2VPBRx4R
+ mkBEn0FEBkaEQpwaBd6eGBOZFhNelNsGBAZGhEKcGgXY0cSTFhdYntmRlwQGRoRCnBoF2tIXxg
+ eR2l+Tn8ZEBkaEQpwaBdmHnhZSUFMREdzZBAZGhEKcGgXZlBOX2ZlRF1Za00QGRoRCnBoF21IR
+ XtgZmZvUhloEBkaEQpwfxdpcG9BEx5IawFlWxAZGhEKcH0XaXBvQRMeSGsBZVsQGRoRCnB/F2R
+ uawFnUlluXV5hEBkaEQpwfRdkbmsBZ1JZbl1eYRAZGhEKcH8XaRkaRmZzfBMSfmcQGRoRCnB9F
+ 2kZGkZmc3wTEn5nEBkaEQpwQxdpTG1obF5oZ2xkbRAZGhEKbX4XGxEKWE0XSxE=
+X-Proofpoint-GUID: gWrx5rKRRrpJk_xDcHkiO1tjRKCDKkhc
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjUwODA3MDA5OSBTYWx0ZWRfX3phG2b8agoua
+ 0wkD+ApC6iSKX94ZRzGriBEsUOnSyBG7vxTQRQu9xfMwP13DoawAfaR+AgI5c6OA7zJnFNRAm2i
+ 9cgI/2Kv/Xjo6awjpAcjX8xmYCaMw8CHAZIvQ5ePFsVm1wi4dTMMYRotPQwnVMSguDKKgfLuCHp
+ NvkmwkZg3aJuqnq0eZiGkfb1cF6eP5thhL+/kOSdLc6kv/KWYVEUMm4SRvwKYFqKk25JhcsTHKj
+ wJ4OEmj0IAGVH0eZYbfx93re4hCVbZQE/8vuzflIuO59fSIZocYirqvIdIg5xM8DJqhA6Lkp0=
+X-Proofpoint-ORIG-GUID: gWrx5rKRRrpJk_xDcHkiO1tjRKCDKkhc
+
+<html><body>Hallo Tim,&nbsp;<br><br>hier mal ein Nachtrag mit drei Beispiel=
+seiten aus dem Netz , von denen betreffend Design einiges als Anregung f=C3=
+=BCr die Mobilversion (und Desktop) dienen k=C3=B6nnte:&nbsp;<br><br>1) <br=
+><a href=3D"http://naturheilpraxis-brahmer=2Ede">naturheilpraxis-brahmer=2E=
+de</a><br><br>Insgesamt kommt hier der Einstieg dem am n=C3=A4chsten, wie i=
+ch mir die Startseite vorstelle (mit Foto/Text etc), ganz gut: Der Balken m=
+it dem Namen bleibt auch beim Scrollen oben stehen (ohne Deko)! Das Men=C3=
+=BC ist auch ok, aber viel zu lang=2E=2E=2E <br><br>Beim dritten Beispiel:<=
+br><br>2)<br><a href=3D"http://naturheilpraxis-elke-ruehl=2Ede">naturheilpr=
+axis-elke-ruehl=2Ede</a><br><br>finde ich gut die Variante, zus=C3=A4tzlich=
+ die Telefonnummer ganz oben herauszustellen, so k=C3=B6nnte man die Praxis=
+ gleich und direkt anw=C3=A4hlen=2E Finde ich besonders praktisch, denn es =
+ist ja die einzige (Erst-)Kontaktvariante, die Brigitte m=C3=B6chte=2E=2E=
+=2E&nbsp;<br><br>Hier w=C3=A4re =C3=BCbrigens die Men=C3=BCgestaltung auch =
+eine brauchbare Alternative zu 1), mit den Buttons f=C3=BCr ein Untermen=C3=
+=BC=2E=2E=2E<br><br>Und noch eine =C3=A4hnliche (bessere?) Variante zu dem =
+fixierten Balken oben dr=C3=BCber:<br><br>3)&nbsp;<br><a href=3D"http://pra=
+xis-puehl=2Ede">praxis-puehl=2Ede</a><br><br>Hier gibts sogar zwei Balken, =
+finde auch diese Men=C3=BCstruktur eine gute Vorlage f=C3=BCr Brigittes Sei=
+te=2E=2E=2E<br><br>***<br><br>Zum Men=C3=BC bei Brigitte (als Vorschlag)&nb=
+sp; mal folgende aktualisierte Version:&nbsp;<br><br>Ganz oben dr=C3=BCber =
+einen (oder zwei) Balken, der beim Scrollen stehen bleibt (siehe Beispiel 1=
+ und 3)<br><br>Darin steht:&nbsp;<br><br>Brigitte Romann&nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; Heilpraktikerin&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Tel=2E 091=
+22 887 91 91 (daneben oder auch dar=C3=BCber)<br><br>Darunter erscheint die=
+ Startseite (Home) mit Text und Foto, ohne "Willkommen" oder sonstigen Begr=
+=C3=BC=C3=9Fungs-Schnickschnack=2E=2E=2E<br><br>Denkbar w=C3=A4re, beim Tex=
+t unter Absatz 2 einen Button (z=2EB=2E "Weiterlesen" oder "Mehr") einzuf=
+=C3=BCgen, der dann erst den gesamten Text mit Absatz 3-5 =C3=B6ffnet=2E&nb=
+sp; Das Prinzip k=C3=B6nnte man&nbsp;auch bei den anderen (l=C3=A4ngeren) T=
+exten so anwenden=2E<br><br>***<br><br>Struktur Men=C3=BC insgesamt (nur vi=
+er Punkte, ohne Impressum/Datenschutz), aktualisiert als Vorschlag:&nbsp;<b=
+r><br>&gt;Home<br><br>&gt;Behandlungen (statt "Therapie und Behandlung"&nbs=
+p; - mit Untermen=C3=BC:)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Behandlung=
+sschwerpunkte&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Behandlungsmetho=
+den&nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Behandlungstermine<b=
+r>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Behandlungszeiten/-kosten<br><br>&gt;=
+=C3=9Cber mich<br><br>&gt;Kontakt/Anfahrt<br><br>***<br>Soweit erg=C3=A4nze=
+nd=2E Mein Vorschlag w=C3=A4re au=C3=9Ferdem, dass wir die Feinarbeit viell=
+eicht w=C3=A4hrend Eures Besuches in Schwabach Ende August zusammen machen,=
+ w=C3=A4re das ok?<br><br>Danke und viele Gr=C3=BC=C3=9Fe, Christoph</body>=
+</html>

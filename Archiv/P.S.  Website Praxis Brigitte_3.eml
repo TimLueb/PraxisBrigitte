@@ -1,0 +1,186 @@
+Return-path: <cgoelitz@gmx.de>
+Original-recipient: rfc822;timluebbers@me.com
+Received: from p00-icloudmta-smtpin-us-central-1n-60-percent-34 by p131-mailgateway-smtp-6f565b47b9-5w5xv (mailgateway 2530B71)
+	with SMTP id 4350c712-bfb7-4e96-9f9a-15e8a7cccec9 
+	for <timluebbers@me.com>; Thu, 7 Aug 2025 12:39:15 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: 4350c712-bfb7-4e96-9f9a-15e8a7cccec9
+Received: from mout.gmx.net (mout.gmx.net [212.227.17.22])
+	by p00-icloudmta-smtpin-us-central-1n-60-percent-34 (Postfix) with ESMTPS id 10F07C00114
+	for <timluebbers@me.com>; Thu,  7 Aug 2025 12:39:11 +0000 (UTC)
+X-ICL-Info: GAtbRVYDBVFFSlVFSgQEUVUKE0oWX1gHVQoPB0UCB1BbS1RAVgEBTEdLRhIcDVUFGhwKHgxKdgUYAUgTHRBQBkgeCw9WVFNCBxpbAxFdWhcQGwQSCkN2DxBXBRgVEF4HGRZbGhdFQkwSFB5ZFlVCQgUNFEoVX0MWWx4LD1ZeUxZVHQJKH11OTBEcRhoRVAteAQsPGRFET08UQAJFQQcBUFhLB05LHQJXQU5LFUAAA08WSVVAHglUUBccVxRVAQFXQUxRR0sED1RFSCYDCllYCwEASxoLVxsQEAoSWh9dTk8SFB5aFFlAB1hMBBFPBQAGWBsLQBRYCA==
+X-ICL-Score: 2.33303322423
+Authentication-Results: bimi.icloud.com; bimi=none
+X-ARC-Info: policy=fail; arc=none
+Authentication-Results: arc.icloud.com; arc=none
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=gmx.de
+X-DMARC-Policy: v=DMARC1; p=quarantine; rua=mailto:dmarcreport@gmx.net
+X-DMARC-Info: pass=pass; dmarc-policy=quarantine; s=r1; d=r1; pdomain=gmx.de
+Authentication-Results: dkim-verifier.icloud.com;
+	dkim=pass (2048-bit key) header.d=gmx.de header.i=cgoelitz@gmx.de header.b=Jg1k5rUE
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of cgoelitz@gmx.de designates 212.227.17.22 as permitted sender) smtp.mailfrom=cgoelitz@gmx.de
+Received-SPF: pass (spf.icloud.com: domain of cgoelitz@gmx.de designates 212.227.17.22 as permitted sender) receiver=spf.icloud.com; client-ip=212.227.17.22; helo=mout.gmx.net; envelope-from=cgoelitz@gmx.de
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmx.de;
+	s=s31663417; t=1754570349; x=1755175149; i=cgoelitz@gmx.de;
+	bh=KGBgNuRTVY5mUqqh7v8LwlmVGX1V0zROWZXBYcbD2Ng=;
+	h=X-UI-Sender-Class:MIME-Version:Message-ID:From:To:Subject:
+	 Content-Type:Date:Content-Transfer-Encoding:In-Reply-To:
+	 References:cc:content-transfer-encoding:content-type:date:from:
+	 message-id:mime-version:reply-to:subject:to;
+	b=Jg1k5rUEfbBudIoszChhzLmIgM1oap3p80CE9Ij9tLdEZZqdD2wPwQ0AqLu44Ikb
+	 dC6TG1/nwzUh8C66rbKm7PlBMC/CZX4KyHKiNNQkUTox97hKYzwlaHur75llVpmjz
+	 UWLInDV+uZSvsF77NGxnsb/fGPz2fdaJsRCFf/D1Udyuw8bm+GhmMU89nxmKJQsjL
+	 sAj0pnhE8U/TwROKpmq8Hw9grPW9UYwMjzl+ae6Dm1VWBJTcSnmHmcE2k2bBvnuFB
+	 SQ2I1wtaW1pV712B8nFi2wsH3XyhsOLbq0B9l+pIt/GQVORPrHAeeCrcj8vliwBPh
+	 N7G0zyhVxz1f+lMYlw==
+X-UI-Sender-Class: 724b4f7f-cbec-4199-ad4e-598c01a50d3a
+Received: from [91.4.198.39] ([91.4.198.39]) by
+ trinity-msg-rest-gmx-gmx-live-5bf756d-bm7lh (via HTTP); Thu, 7 Aug 2025
+ 12:39:09 +0000
+MIME-Version: 1.0
+Message-ID: <trinity-a9d29772-2a93-4547-b805-c037f9b2be1c-1754570349601@trinity-msg-rest-gmx-gmx-live-5bf756d-bm7lh>
+From: cgoelitz@gmx.de
+To: timluebbers@me.com
+Subject: =?UTF-8?Q?P=2ES=2E=C2=A0=C2=A0Website_Praxis_Brigitte=5F3?=
+Content-Type: text/html; charset=UTF-8
+Importance: normal
+Date: Thu, 7 Aug 2025 12:39:09 +0000
+Content-Transfer-Encoding: quoted-printable
+In-Reply-To: <trinity-7c03b568-c0cd-4c23-84a2-f70236eacc03-1754569279911@trinity-msg-rest-gmx-gmx-live-5bf756d-tgrzz>
+References: <trinity-54ace6e6-fa87-4157-8541-d4cd60158387-1754494119135@trinity-msg-rest-gmx-gmx-live-b86d556f-jzz4z>
+ <trinity-7c03b568-c0cd-4c23-84a2-f70236eacc03-1754569279911@trinity-msg-rest-gmx-gmx-live-5bf756d-tgrzz>
+X-Priority: 3
+X-Provags-ID: V03:K1:Jga9RY4IKXBkpFNGTaX1he86QkMc4axgl0Ey6LU8+RRoNfk8AGh3VsaPpEch3NalJKWlT
+ sNSYaWvm3N1S+CQfErlYQHRA0tpuWIs7Wk+6Oc6dFPIRP9COxaVvHNCq35pHCTG4TBy5gjQFSN0b
+ 3/5+Yoxh8o/EoVLWYBkpqIqaI+Dafaa0I1atKRZxWyhcHPw7k8zYLJG5okej+BzZiq7/CT8NWaUo
+ HyeLg9uTr9UtlpD9t5dEtiseBk0G6jgCNboqPhrHq55hS6VRd9PrMBD/KDKT++EDSOjrRGWjRT6J
+ bEZSPmrXKvCfj30jB0hMdqi3WrFrbsqxgbxOHkOl+TmhDS/f2wxZD/w28cV5/eY4CE=
+UI-OutboundReport: notjunk:1;M01:P0:xa2Okf9FR8c=;FXcgnNZ5gsBPS0ZaUpnkqGigPw8
+ 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
+ Ygnogcw6bt9m6pei3PKows=
+X-MANTSH: 1TFkXHxoRCllEF2F7eWZJXm9NGmFjEQpZTRdkRURPEQpfWRcYEhsRCl9NF2RFRE8
+ RCllJFxkfcRsGHBN3BhsbHAYaBhoGGxoaBhkacRsQGncGGgYaBhoGGgYaBhpxGhAadwYaEQpZX
+ hdsbHkRCkNOFxp9cH5fbnIdYGx9cm9LEn1/GkJCb1hpa29dTk4eGn98EQpYXBcZBBoEHx4FGxo
+ aBBIYBBsfEgQYExAbHhofGhEKXlkXTFNBZ2YRCk1cFxgbHhEKTFoXaGlNa2sRCkxGF2xNaxEKQ
+ 1oXGBsYBBgYHQQbHQQYGBEKQl4XGxEKQlwXGxEKXk4XGxEKQksXaE1kGmIZb2kSemERCkJJF2h
+ NZBpiGW9pEnphEQpCRRdke2FzXFh+exttGBEKQk4XaE1kGmIZb2kSemERCkJMF2R7YXNcWH57G
+ 20YEQpCbBdke2FzXFh+exttGBEKQkAXemJTUnJTX1BJEmkRCkJYF2VeWR5Sf0tcWGdiEQpCeBd
+ uSGFueU5BR1phbBEKTV4XGxEKWlgXHhEKcGgXYG8cQHpcYkFYeh0QGRoRCnBoF3p4YE5kWE16U
+ 2wYEBkaEQpwaBdjRxJMWF1ie2ZGXBAZGhEKcGgXYxpMYkhwZE17GmsQGRoRCnBoF2YeeFlJQUx
+ ER3NkEBkaEQpwaBdmUE5fZmVEXVlrTRAZGhEKcGgXZlhPTVxYY09iUlwQGRoRCnBoF2l6H3pLf
+ GcTHmlFEBkaEQpwfxdnHUFebWBuZXhdYxAZGhEKcH0XZx1BXm1gbmV4XWMQGRoRCnB/F2lwb0E
+ THkhrAWVbEBkaEQpwfRdpcG9BEx5IawFlWxAZGhEKcH8XZG5rAWdSWW5dXmEQGRoRCnB9F2Rua
+ wFnUlluXV5hEBkaEQpwfxdpGRpGZnN8ExJ+ZxAZGhEKcH0XaRkaRmZzfBMSfmcQGRoRCnBDF2l
+ MbWhsXmhnbGRtEBkaEQptfhcbEQpYTRdLEQ==
+X-Proofpoint-GUID: 0WZTuDX7JFWXEa8WU0hhErCAEwdd40UV
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjUwODA3MDEwMSBTYWx0ZWRfX77ZZGW1+UVDV
+ 7rJdY1IPpkzCh6DjecoC0nj9GfWhBBBeHGArTg2LoceKoIV6I5knhT/SDm1n+Qd83bJBvXMWY23
+ PNX4GxkjlSfHnTUM/RQQu8Ag5Ki8pBf8UxBgoe/1B186dHLcUOZ5x80lKwJ+GsvaRSstsJJBM2j
+ x2sChL3q1DmHAEmiIv7nqA0r0OutshJrPqzBfI8x/5EnXrI6nPPq5R1fiq7OIgBip3FKJQQMOeg
+ WekYUdtJ29EGAt6PRFQ3K4SPPQ4GeNt/EcTcDJGxAwbrzCd6fulVGXA0awwJBvnyBs5U2UlWc=
+X-Proofpoint-ORIG-GUID: 0WZTuDX7JFWXEa8WU0hhErCAEwdd40UV
+
+<html><body>erinnere gerade, dass Brigitte am Telefon heute was meinte, Du =
+w=C3=BCrdest so eine Art Kacheln vorschlagen=2E=2E=2E Wei=C3=9F nicht genau=
+, wie die dann aussehen, aber (=2E=2E=2E als vorsichtige Anmerkung ;-) bin =
+etwas skeptisch, denn alles was ich bis jetzt gesehen habe an Kacheln, ist =
+tendenziell eher nicht Brigittes Vorstellungen/Befindlichkeiten entsprechen=
+d, sie will sich in ihrer Arbeit und deren Darstellung generell nicht so "f=
+estlegen"=2E=2E=2E Kacheln sind da ziemlich gegens=C3=A4tzlicher Natur, naj=
+a, f=C3=BCr mein Gef=C3=BChl zumindest=2E=2E=2E&nbsp;<br>Vielleicht k=C3=B6=
+nnen wir mal telefonieren dazu, bevor Du Dich in aufwendige Arbeit st=C3=BC=
+rzt=2E=2E=2E<br><br>Und schon mal DANKE f=C3=BCr Deine Geduld=2E=2E=2E ;-)<=
+div class=3D"signature"><br></div><div class=3D"signature">--</div><div cla=
+ss=3D"signature"><br>Gesendet mit der GMX Mail App</div><div class=3D"mail_=
+android_quote" style=3D"line-height: 1"><br></div><div class=3D"mail_androi=
+d_quote" style=3D"line-height: 1"><br><meta name=3D"viewport" content=3D"wi=
+dth=3Ddevice-width"><meta http-equiv=3D"Content-Type" content=3D"text/vnd=
+=2Eui=2Einsecure+html;charset=3Dutf-8"><div class=3D"mail_android_quote" st=
+yle=3D"line-height: 1"><br>Am 07=2E08=2E25, 14:21 schrieb cgoelitz@<a href=
+=3D"http://gmx=2Ede">gmx=2Ede</a>:<blockquote class=3D"gmail_quote" style=
+=3D"margin: 0=2E8ex 0pt 0pt 0=2E8ex; border-left: 1px solid rgb(204, 204, 2=
+04); padding-left: 1ex;">
+Hallo Tim,&nbsp;<br><br>hier mal ein Nachtrag mit drei Beispielseiten aus =
+dem Netz , von denen betreffend Design einiges als Anregung f=C3=BCr die Mo=
+bilversion (und Desktop) dienen k=C3=B6nnte:&nbsp;<br><br>1) <br><a href=3D=
+"http://naturheilpraxis-brahmer=2Ede">naturheilpraxis-brahmer=2Ede</a><br><=
+br>Insgesamt kommt hier der Einstieg dem am n=C3=A4chsten, wie ich mir die =
+Startseite vorstelle (mit Foto/Text etc), ganz gut: Der Balken mit dem Name=
+n bleibt auch beim Scrollen oben stehen (ohne Deko)! Das Men=C3=BC ist auch=
+ ok, aber viel zu lang=2E=2E=2E <br><br>Beim dritten Beispiel:<br><br>2)<br=
+><a href=3D"http://naturheilpraxis-elke-ruehl=2Ede">naturheilpraxis-elke-ru=
+ehl=2Ede</a><br><br>finde ich gut die Variante, zus=C3=A4tzlich die Telefon=
+nummer ganz oben herauszustellen, so k=C3=B6nnte man die Praxis gleich und =
+direkt anw=C3=A4hlen=2E Finde ich besonders praktisch, denn es ist ja die e=
+inzige (Erst-)Kontaktvariante, die Brigitte m=C3=B6chte=2E=2E=2E&nbsp;<br><=
+br>Hier w=C3=A4re =C3=BCbrigens die Men=C3=BCgestaltung auch eine brauchbar=
+e Alternative zu 1), mit den Buttons f=C3=BCr ein Untermen=C3=BC=2E=2E=2E<b=
+r><br>Und noch eine =C3=A4hnliche (bessere?) Variante zu dem fixierten Balk=
+en oben dr=C3=BCber:<br><br>3)&nbsp;<br><a href=3D"http://praxis-puehl=2Ede=
+">praxis-puehl=2Ede</a><br><br>Hier gibts sogar zwei Balken, finde auch die=
+se Men=C3=BCstruktur eine gute Vorlage f=C3=BCr Brigittes Seite=2E=2E=2E<br=
+><br>***<br><br>Zum Men=C3=BC bei Brigitte (als Vorschlag)&nbsp; mal folgen=
+de aktualisierte Version:&nbsp;<br><br>Ganz oben dr=C3=BCber einen (oder zw=
+ei) Balken, der beim Scrollen stehen bleibt (siehe Beispiel 1 und 3)<br><br=
+>Darin steht:&nbsp;<br><br>Brigitte Romann&nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; Heilpraktikerin&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Tel=2E 09122 887 91 91 (=
+daneben oder auch dar=C3=BCber)<br><br>Darunter erscheint die Startseite (H=
+ome) mit Text und Foto, ohne "Willkommen" oder sonstigen Begr=C3=BC=C3=9Fun=
+gs-Schnickschnack=2E=2E=2E<br><br>Denkbar w=C3=A4re, beim Text unter Absatz=
+ 2 einen Button (z=2EB=2E "Weiterlesen" oder "Mehr") einzuf=C3=BCgen, der d=
+ann erst den gesamten Text mit Absatz 3-5 =C3=B6ffnet=2E&nbsp; Das Prinzip =
+k=C3=B6nnte man&nbsp;auch bei den anderen (l=C3=A4ngeren) Texten so anwende=
+n=2E<br><br>***<br><br>Struktur Men=C3=BC insgesamt (nur vier Punkte, ohne =
+Impressum/Datenschutz), aktualisiert als Vorschlag:&nbsp;<br><br>&gt;Home<b=
+r><br>&gt;Behandlungen (statt "Therapie und Behandlung"&nbsp; - mit Unterme=
+n=C3=BC:)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Behandlungsschwerpunkte&nb=
+sp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Behandlungsmethoden&nbsp;&nbsp;<=
+br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Behandlungstermine<br>&nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp;- Behandlungszeiten/-kosten<br><br>&gt;=C3=9Cber mich<b=
+r><br>&gt;Kontakt/Anfahrt<br><br>***<br>Soweit erg=C3=A4nzend=2E Mein Vorsc=
+hlag w=C3=A4re au=C3=9Ferdem, dass wir die Feinarbeit vielleicht w=C3=A4hre=
+nd Eures Besuches in Schwabach Ende August zusammen machen, w=C3=A4re das o=
+k?<br><br>Danke und viele Gr=C3=BC=C3=9Fe, Christoph</blockquote></div></di=
+v></body></html>

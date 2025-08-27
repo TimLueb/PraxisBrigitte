@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Heilpraktiker Praxis - Ihr Experte für alternative Medizin und ganzheitliche Heilung." />
+  <title>Heilpraktiker Praxis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #3f4cd9;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    }
+
+    /* Navigation Styles */
+    nav {
+      background-color: #b9b546;
+      position: relative;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 10px;
+      display: block;
+    }
+
+    .menu-toggle {
+      display: none;
+      background-color: #b9b546;
+      color: white;
+      padding: 15px;
+      font-size: 1.2em;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: right;
+    }
+
+    section {
+      padding: 20px;
+      background-color: white;
+      margin: 20px 10px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+    }
+
+    footer {
+      background-color: #b9b546;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .kontakt-info {
+      background-color: #7cb5ff79;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .start-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    }
+
+    .start-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+    }
+
+    .start-text {
+    flex: 1;
+    min-width: 250px;
+    }
+
+    /* Responsive Anpassung für kleinere Bildschirme */
+    @media (max-width: 768px) {
+    .start-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .start-text {
+        text-align: left;
+    }
+
+    .start-image {
+        max-width: 75%;
+    }
+    }
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #b9b546;
+      }
+
+      .nav-links li {
+        margin: 0;
+        border-top: 1px solid #b9b546;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header style="display: flex; align-items: center; justify-content: center; gap: 100px;">
+    <img src="Logo_Praxis_BR.png" alt="Praxis Logo" style="height: 150px; border-radius: 8px;">
+    <div>
+      <h1>Brigitte Romann</h1>
+      <p>Heilpraktikerin <br>
+        <strong>Tel.</strong> 09122 887 91 91</p>
+    </div>
+  </header>
+
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Start</a></li>
+      <li>
+        <a href="#behandlungen">Behandlungen</a>
+        <ul style="background-color: #aca82a; list-style: none; margin: 0; padding: 0; position: absolute; display: none;">
+          <li><em><a href="index.html#behandlungsschwerpunkte" style="padding-left: 30px;">Behandlungsschwerpunkte</a></em></li>
+          <li><em><a href="index.html#behandlungsmethoden" style="padding-left: 30px;">Behandlungsmethoden</a></em></li>
+          <li><em><a href="index.html#behandlungstermine" style="padding-left: 30px;">Behandlungstermine/-kosten</a></em></li>
+        </ul>
+      </li>
+      <li><a href="index.html#about">Über mich</a></li>
+      <li><a href="index.html#directions">Anfahrt</a></li>
+    </ul>
+  </nav>
+  <script>
+    // Dropdown für Untermenü "Behandlungen"
+    document.addEventListener("DOMContentLoaded", function() {
+      const behandlungen = document.querySelector('.nav-links > li:nth-child(2)');
+      const submenu = behandlungen.querySelector('ul');
+      behandlungen.addEventListener('mouseenter', function() {
+        submenu.style.display = 'block';
+      });
+      behandlungen.addEventListener('mouseleave', function() {
+        submenu.style.display = 'none';
+      });
+    });
+  </script>
+
+  <section id="impressum">
+    <div class="impressum-container">
+    <div class="impressum-text">
+        <h3>Angaben gemäß §5 TMG / verantwortlich für den Inhalt nach §18 Abs. 1 MStV  / Kontaktdaten: </h3>
+            <p>Brigitte Romann<br>
+            Heilpraktikerin<br>
+            Tulpenweg 4<br>
+            91126 Schwabach</p>
+            <p> Telefon: 09122 – 887 91 91<br>
+            brigitte-romann@gmx.de</p>
+            <p>Steuer-Nr. 247/221/30746 Finanzamt Schwabach</p>
+            <p>Heilkundliche Tätigkeit ist von der Umsatzsteuer gemäß § 4 Nr.14 UStG befreit.</p>
+            <p><strong>Berufshaftpflichtversicherung:</strong> SIGNAL IDUNA, 44121 Dortmund</p>
+            <p><strong>Gesetzliche Berufsbezeichnung:</strong> Heilpraktiker/Heilpraktikerin</p>
+            <p>Behördliche Erlaubnis: Gesundheitsamt Ansbach mit Bescheid Ordnungsamt der Stadt Schwabach vom 05.05.2000 auf Erteilung der Erlaubnis der berufsmäßigen Ausübung ohne Bestallung. Zuständige Aufsichtsbehörde: Gesundheitsamt Ansbach, 91507 Ansbach</p>
+            <p><strong>Berufsrechtliche Regelungen:</strong> <br> 
+                Gesetz über die berufsmäßige Ausübung der Heilkunde ohne ärztliche Bestallung (Heilpraktikergesetz), nachzulesen unter:<br>
+            <a href="https://www.bdh-online.de/wp-content/uploads/2015/08/Berufsordnung-Heilpraktiker_2015_210x297_20150814.pdf">https://www.bdh-online.de/wp-content/uploads/2015/08/Berufsordnung-Heilpraktiker_2015_210x297_20150814.pdf</a></p>
+            <p><strong> Rechtsgundlage der Heilpraktikertätigkeit, Heilpraktikergesetz und Durchführungsverordnung:</strong><br>
+            Nachzulesen unter:<br>
+            <a href="https://www.gesetze-im-internet.de/heilprg/BJNR002510939.html">https://www.gesetze-im-internet.de/heilprg/BJNR002510939.html</a></p>
+        <h3>Haftung für Inhalte</h3>
+            <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+        <h3>Haftung für Links</h3>
+            <p>Unser Angebot enthält ggf. Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
+            <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3>Urheberrecht</h3>
+            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2024 Heilpraktiker Praxis. Alle Rechte vorbehalten.</p>
+    <p>
+      <a href="impressum.html" style="color: white; text-decoration: underline;">Impressum</a> |
+      <a href="datenschutz.html" style="color: white; text-decoration: underline;">Datenschutz</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
